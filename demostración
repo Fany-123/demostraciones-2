@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Juego de Clasificación de Animales</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Pantalla de Inicio -->
+    <div id="start-screen" class="screen active">
+        <h1 class="title">¡Rescate Animal!</h1>
+        <div class="animal-preview">🦁🐳🐘🐙</div>
+        <p>Ayuda a los animales a volver a su casa.</p>
+        <button id="start-btn" class="btn bounce">Jugar 🚀</button>
+    </div>
+
+    <!-- Pantalla de Juego -->
+    <div id="game-screen" class="screen">
+        <div id="habitat-bosque" class="habitat" data-type="bosque">
+            <div class="habitat-label">Bosque 🌳</div>
+            <!-- Decoraciones bosque -->
+            <div class="tree" style="left: 10%; bottom: 20%;">🌲</div>
+            <div class="tree" style="left: 30%; bottom: 35%;">🌳</div>
+            <div class="cloud" style="left: 10%; top: 10%;">☁️</div>
+        </div>
+        
+        <div id="habitat-oceano" class="habitat" data-type="oceano">
+            <div class="habitat-label">Océano 🌊</div>
+            <!-- Decoraciones océano -->
+            <div class="wave">🌊🌊🌊🌊</div>
+            <div class="cloud" style="right: 15%; top: 15%;">☁️</div>
+        </div>
+
+        <div id="center-zone">
+            <div id="animal-container">
+                <!-- Los animales aparecerán aquí -->
+            </div>
+        </div>
+
+        <!-- Feedback visual temporal (estrella o cruz) -->
+        <div id="feedback-icon"></div>
+    </div>
+
+    <!-- Pantalla de Victoria -->
+    <div id="win-screen" class="screen">
+        <h1 class="title">¡Lo lograste!</h1>
+        <p id="win-message">¡Todos los animales están en casa!</p>
+        <div id="stars">⭐⭐⭐</div>
+        <button id="next-level-btn" class="btn bounce hidden">Siguiente Nivel ➡️</button>
+        <button id="restart-btn" class="btn hidden">Jugar de nuevo 🔄</button>
+        <div id="confetti-container"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
